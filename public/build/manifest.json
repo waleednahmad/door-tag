@@ -1,0 +1,27 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-Bl3Pr5Dl.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/front/css/app.css": {
+    "file": "assets/app-BTLZtRO7.css",
+    "src": "resources/front/css/app.css",
+    "isEntry": true
+  },
+  "resources/front/js/app.js": {
+    "file": "assets/app-L6k1JdoG.js",
+    "name": "app",
+    "src": "resources/front/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DbhGkJcc.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-BFLOAua-.css"
+    ]
+  }
+}
