@@ -11,10 +11,12 @@
                 data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="col-12">
                     <div class="section-title">
-                        <h3>Categories</h3>
+                        <h3>Explore Our Wholesale Wall Art Categories</h3>
                         <p>
-                            Explore our diverse range of categories, each offering a unique selection of high-quality
-                            home décor products. Find the perfect items to suit your style and needs.
+                            Our curated wall art collection is organized to help you quickly find exactly what your
+                            customers are looking for. Whether you're stocking a retail store, furnishing hospitality
+                            spaces, or sourcing for large-scale design projects, our wide selection of high-quality,
+                            competitively priced art offers styles to suit every theme, trend, and customer preference.
                         </p>
                     </div>
                 </div>
