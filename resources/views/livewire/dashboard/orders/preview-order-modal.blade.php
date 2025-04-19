@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-12">
                     <h4 class="py-2">
-                        <i class="fas fa-globe"></i> Door Tag.
+                        <i class="fas fa-globe"></i> Doortag.
                         <small class="float-right">
                             <b>Ordered At:</b>
                             @if ($order?->created_at)

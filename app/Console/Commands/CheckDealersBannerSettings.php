@@ -31,7 +31,7 @@ class CheckDealersBannerSettings extends Command
         foreach ($dealers as $dealer) {
             if (!$dealer->bannerSetting) {
                 $dealer->bannerSetting()->create([
-                    'text' => 'Door Tag – Exclusive Deals Just for You',
+                    'text' => 'Doortag – Exclusive Deals Just for You',
                     'text_color' => '#000000',
                     'bg_color' => '#f1c55e',
                 ]);

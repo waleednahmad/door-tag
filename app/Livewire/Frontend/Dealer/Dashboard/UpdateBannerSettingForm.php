@@ -29,7 +29,7 @@ class UpdateBannerSettingForm extends Component
             $this->bg_color = auth('dealer')->user()->bannerSetting->bg_color;
         } else {
             auth('dealer')->user()->bannerSetting()->create([
-                'text' => 'Door Tag – Exclusive Deals Just for You',
+                'text' => 'Doortag – Exclusive Deals Just for You',
                 'text_color' => '#000000',
                 'bg_color' => '#f1c55e',
             ]);

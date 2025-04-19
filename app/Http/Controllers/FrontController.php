@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\DealerApplicationReceived;
 use App\Mail\NewDealerApplicationReceived;
 use App\Mail\TestEmail;
+use App\Models\Category;
 use App\Models\Dealer;
 use App\Models\Page;
 use App\Models\Product;
@@ -28,7 +29,18 @@ class FrontController extends Controller
             ->take(12)
             ->inRandomOrder()
             ->get();
-        return view('frontend.index', compact('products', 'page'));
+        $categories  = Category::active()
+            ->whereHas('subcategories', function ($subQuery) {
+                $subQuery->whereHas('products', function ($query) {
+                    $query->where('status', 1)->whereHas('variants');
+                });
+            })
+            ->orWhereHas('products', function ($query) {
+                $query->where('status', 1)->whereHas('variants');
+            })
+            ->orderBy('name')
+            ->get();
+        return view('frontend.index', compact('products', 'page', 'categories'));
     }
 
     public function shop()
@@ -104,7 +116,7 @@ class FrontController extends Controller
             'message',
         ]);
 
-        
+
 
         if ($request->hasFile('resale_certificate')) {
             $file = $request->file('resale_certificate')->store('resale_certificates', 'public');

@@ -1182,7 +1182,7 @@ class PagesSeeder extends Seeder
                                     @php
                                         echo date("Y");
                                     @endphp
-                                    <a href="#">Door Tag</a>
+                                    <a href="#">Doortag</a>
                                 </p>
                             </div>
                             <div class="footer-bottom-right">

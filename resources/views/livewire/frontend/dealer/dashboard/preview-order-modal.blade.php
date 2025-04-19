@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-12">
                     <h4 class="py-2 d-flex align-items-center justify-content-between">
-                        Door Tag.
+                        Doortag.
                         <small class="float-right">
                             <b>Ordered At:</b>
                             @if ($order?->created_at)
