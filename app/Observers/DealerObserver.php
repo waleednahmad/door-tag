@@ -18,7 +18,7 @@ class DealerObserver
     {
         // Create a default banner setting for the dealer
         $dealer->bannerSetting()->create([
-            'text' => 'Golden Rugs – Exclusive Deals Just for You',
+            'text' => 'Door Tag – Exclusive Deals Just for You',
             'text_color' => '#000000',
             'bg_color' => '#f1c55e',
         ]);

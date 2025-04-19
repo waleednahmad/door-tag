@@ -7,9 +7,6 @@ use Livewire\Component;
 
 class UpdateBannerSettingForm extends Component
 {
-    // $table->string('text')->default('Golden Rugs – Exclusive Deals Just for You');
-    // $table->string('text_color')->default('#000000');
-    // $table->string('bg_color')->default('#f1c55e');
     #[Validate('required|string')]
     public $text;
     #[Validate('required|string|max:255')]
@@ -32,7 +29,7 @@ class UpdateBannerSettingForm extends Component
             $this->bg_color = auth('dealer')->user()->bannerSetting->bg_color;
         } else {
             auth('dealer')->user()->bannerSetting()->create([
-                'text' => 'Golden Rugs – Exclusive Deals Just for You',
+                'text' => 'Door Tag – Exclusive Deals Just for You',
                 'text_color' => '#000000',
                 'bg_color' => '#f1c55e',
             ]);

@@ -20,8 +20,8 @@
         <p style="font-size: 16px; color: #555;">
             📍 <strong>Address:</strong> 4528 W 51st St, Chicago, IL 60632 <br>
             📞 <strong>Phone:</strong> <a href="tel:(773) 490-3801">(773) 490-3801</a> <br>
-            ✉️ <strong>Email:</strong> <a href="mailto:sales@goldenrugsinc.com"
-                style="color: #d19c4b; text-decoration: none;">sales@goldenrugsinc.com</a>
+            ✉️ <strong>Email:</strong> <a href="mailto:orders@doortag.com"
+                style="color: #d19c4b; text-decoration: none;">orders@doortag.com</a>
         </p>
         <p style="font-size: 16px; color: #555;">Best regards, <br> <strong>{{ getWebsiteTitle() }}</strong></p>
     </div>

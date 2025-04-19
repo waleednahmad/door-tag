@@ -103,8 +103,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'sales@goldenrugsinc.com'),
-        'name' => env('MAIL_FROM_NAME', 'Golden Rugs'),
+        'address' => env('MAIL_FROM_ADDRESS', 'orders@doortag.com'),
+        'name' => env('MAIL_FROM_NAME', 'Door Tag'),
     ],
 
     /*
