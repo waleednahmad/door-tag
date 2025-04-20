@@ -4,44 +4,46 @@
 
 @section('content')
     {!! $page->content !!}
-    {{-- Categories Section Grid 6 columns --}}
-    <div class="home1-category-section mb-120">
-        <div class="container">
-            <div class="flex-wrap gap-3 row mb-3 align-items-center justify-content-between wow animate fadeInDown"
-                data-wow-delay="200ms" data-wow-duration="1500ms">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h3>Explore Our Wholesale Wall Art Categories</h3>
-                        <p>
-                            Our curated wall art collection is organized to help you quickly find exactly what your
-                            customers are looking for. Whether you're stocking a retail store, furnishing hospitality
-                            spaces, or sourcing for large-scale design projects, our wide selection of high-quality,
-                            competitively priced art offers styles to suit every theme, trend, and customer preference.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @forelse ($categories as $category)
-                    <div class="col-lg-2 col-md-4 col-sm-6 wow animate fadeInUp" data-wow-delay="200ms"
-                        data-wow-duration="1500ms">
-                        <a class="card text-center p-2 category-card"
-                            href="{{ route('frontend.shop', ['category' => $category->slug]) }}"
-                            style="background-image: url({{ asset($category->image) }}) ; background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="m-0">
-                                    {{ $category->name }}
-                                </h5>
-                            </div>
-                        </a>
-                    </div>
-                @empty
-                @endforelse
-            </div>
-        </div>
-    </div>
 
     @if (showCategoryAndShopPages() || auth('dealer')->check() || auth('representative')->check() || auth('web')->check())
+        {{-- Categories Section Grid 6 columns --}}
+        <div class="home1-category-section mb-120">
+            <div class="container">
+                <div class="flex-wrap gap-3 row mb-3 align-items-center justify-content-between wow animate fadeInDown"
+                    data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h3>Explore Our Wholesale Wall Art Categories</h3>
+                            <p>
+                                Our curated wall art collection is organized to help you quickly find exactly what your
+                                customers are looking for. Whether you're stocking a retail store, furnishing hospitality
+                                spaces, or sourcing for large-scale design projects, our wide selection of high-quality,
+                                competitively priced art offers styles to suit every theme, trend, and customer preference.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @forelse ($categories as $category)
+                        <div class="col-lg-2 col-md-4 col-sm-6 wow animate fadeInUp" data-wow-delay="200ms"
+                            data-wow-duration="1500ms">
+                            <a class="card text-center p-2 category-card"
+                                href="{{ route('frontend.shop', ['category' => $category->slug]) }}"
+                                style="background-image: url({{ asset($category->image) }}) ; background-size: cover;">
+                                <div class="card-body">
+                                    <h5 class="m-0">
+                                        {{ $category->name }}
+                                    </h5>
+                                </div>
+                            </a>
+                        </div>
+                    @empty
+                    @endforelse
+                </div>
+            </div>
+        </div>
+
+
         <!-- Home1 General Art Section Start -->
         <div class="home1-general-art-slider-section mb-120">
             <div class="container">
