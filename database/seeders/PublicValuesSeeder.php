@@ -84,7 +84,7 @@ class PublicValuesSeeder extends Seeder
             // website title
             [
                 'key' => 'website title',
-                'value' => 'Golden Rugs',
+                'value' => 'Doortag',
                 'type' => 'text',
                 'description' => "Title of the website",
             ],
