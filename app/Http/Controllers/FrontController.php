@@ -8,6 +8,7 @@ use App\Mail\TestEmail;
 use App\Models\Category;
 use App\Models\Dealer;
 use App\Models\Page;
+use App\Models\PriceList;
 use App\Models\Product;
 use App\Models\Representative;
 use App\Models\User;
@@ -126,6 +127,8 @@ class FrontController extends Controller
         $data['name'] = ucwords(strtolower($request->name));
         $data['email'] = strtolower($request->email);
         $data['password'] = Hash::make($request->password);
+        // $data['price_list_id'] = PriceList::where('is_default', 1)->first()->id;
+        $data['fake_sale_percentage'] = getMinimumDealerSalePercentage();
 
         // Check on referal code
         if ($request->ref) {
