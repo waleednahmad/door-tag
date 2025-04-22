@@ -30,7 +30,9 @@
             {{-- Bill to --}}
             <section style="float: left; width: 32%; margin-right: 2%;">
                 <p>
-                    <span style="font-weight: bold; color: #333; display: block; margin-bottom: 4px; font-size: 14px;">
+                    <strong>Name:</strong> {{ $name }} <br>
+                    <span
+                        style="font-weight: bold; color: #333; display: block; margin-bottom: 4px; font-size: 14px; margin-top: 7px;">
                         BILL TO
                     </span>
                     {{ $address }}<br>
@@ -41,7 +43,9 @@
             </section>
             <section style="float: left; width: 32%; margin-right: 2%;">
                 <p>
-                    <span style="font-weight: bold; color: #333; display: block; margin-bottom: 4px; font-size: 14px;">
+                    <strong>Phone:</strong> <a href="tel:{{ $phone }}">{{ $phone }}</a> <br>
+                    <span
+                        style="font-weight: bold; color: #333; display: block; margin-bottom: 4px; font-size: 14px; margin-top: 7px;">
                         SHIP TO
                     </span>
                     {{ $address }}<br>
@@ -72,6 +76,7 @@
             </section>
             <div style="clear: both;"></div>
         </div>
+        <br>
 
 
         <!-- Main content -->
@@ -163,7 +168,7 @@
                                         @foreach ($attributeKeys as $key)
                                             <td style="border: 1px solid #ddd; padding: 3px;">
                                                 @php
-                                                    $value = json_decode($item->attributes, true)[$key] ?? '---';
+                                                    $value = json_decode($item->attributes, true)[$key] ?? ' ';
                                                 @endphp
                                                 {{ $value }}
                                             </td>

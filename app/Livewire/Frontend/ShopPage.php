@@ -27,14 +27,16 @@ class ShopPage extends Component
     public $selectedAttributeValues = [];
     public $productTypes = [];
     public $subCategories = [];
-
+    
     public $rangePrice;
     public $minValue;
     public $maxValue;
-
+    
     #[Url()]
-    public $category;
+    public $category ;
     public $selectedCategory;
+
+    public $breadcrumpData;
 
 
     public function mount()
@@ -60,7 +62,7 @@ class ShopPage extends Component
         }
 
 
-
+        $this->breadcrumpData = DB::table('page_breadcrumps')->where('name', 'shop')->first();
 
 
         // set the search from the url if it exists
@@ -154,6 +156,8 @@ class ShopPage extends Component
         $this->selectedAttributeValues = [];
         $this->productTypes = [];
         $this->subCategories = [];
+        $this->selectedCategory = null;
+        $this->category = null;
     }
 
     public function applySearch()

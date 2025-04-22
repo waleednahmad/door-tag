@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class, 
             PublicValuesSeeder::class,
             PagesSeeder::class,
+            PageBreadcrumpSeeder::class,
+            // ProductListSeeder::class,
         ]);
     }
 }
